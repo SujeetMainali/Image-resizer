@@ -23,7 +23,21 @@ class ImageService {
         data.height
       );
     }
-    return await this.imageRepo.create(image).save();
+    const uploadedImage =  await this.imageRepo.create(image).save();
+    const imagePath = await this.imageRepo.findOne({
+      where:{
+        id: uploadedImage.id
+      },
+      relations: ["uploadedImage"],
+    })
+    return imagePath;
+
+  }
+
+  async getAll() {
+    return await this.imageRepo.find({
+      relations: ["uploadedImage"],
+    });
   }
 }
 

@@ -3,6 +3,10 @@
   padding: 3rem;
   border: 1px solid black;
   border-radius: 1rem;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-between; */
+
 }
 
 .form{
