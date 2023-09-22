@@ -10,7 +10,7 @@ function App() {
   const [data, setData] = useState<any>();
   console.log(data, 'dataa');
   
-  const { register, handleSubmit, getValues } = useForm({
+  const { register, handleSubmit } = useForm({
     defaultValues: {
       title: "",
       width: "",
