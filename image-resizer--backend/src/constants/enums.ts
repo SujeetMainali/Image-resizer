@@ -7,3 +7,7 @@ export enum Environment {
 export enum MediaType {
   IMAGE = "IMAGE",
 }
+
+export enum UserRole {
+  ADMIN = "ADMIN",
+}
