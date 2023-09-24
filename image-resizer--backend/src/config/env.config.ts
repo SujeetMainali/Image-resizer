@@ -1,5 +1,7 @@
-import dotenv from 'dotenv';
-dotenv.config();
+import dotenv from "dotenv";
+import path from "path";
+console.log(path.resolve(process.cwd(), ".env"));
+dotenv.config({ path: path.resolve(process.cwd(), ".env") });
 
 export const DotenvConfig = {
   APP_NAME: process.env.APP_NAME!,
